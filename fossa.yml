@@ -1,0 +1,16 @@
+version: 3
+
+project:
+  name: my-project-name
+  policy: Standard Bundle Distribution   # OR: Single-Binary Distribution / Website/Hosted Service
+
+ci:
+  failOn:
+    - policy
+    - error
+    - vulnerabilities 
+
+analyzers:
+  - type: dependency
+    languages:
+      - python
